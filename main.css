@@ -20,48 +20,70 @@ a {
 }
 
 a:hover {
-    color: var(--color3);
+    color: var(--color1);
 }
 
 body {
     display: grid;
     grid-template-areas:
-    "header header header"
-    "navbar navbar navbar"
-    "footer footer footer";
-    margin: 0;
+    "header"
+    "navbar"
+    "main"
+    "footer";
+    grid-template-rows: 20% 10% 55% 15%;
+    gap: 0;
+    min-height: 100vh;
 }
 
 header {
     grid-area: header;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #bannerpic {
     width: 100vw;
-    z-index: 1;
+    position: relative;
+    z-index: 0;
 }
 
 #logo {
     position: absolute;
     left: 0;
-    bottom: 0.25rem;
+    bottom: 0;
     opacity: 0.8;
-    width: 20vw;
-    z-index: 0;
+    width: 15vw;
+    z-index: 3;
 }
 
 .header-text {
-    color: var(--color5);
+    color: var(--color3);
     position: absolute;
     top: 2rem;
     right: 5rem;
+    z-index: 3;
+    text-shadow: 2px 2px 2px var(--color4);
 }
 
 .navbar {
     grid-area: navbar;
     background-color: var(--color4);
-    align-items: left;
+    text-align: left;
     min-width: fit-content;
+    display: flex;
+    align-items: center;
+    /* padding: 0 20px; */
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .navbar a {
@@ -71,26 +93,18 @@ header {
 }
 
 nav a:hover {
-    color: var(--color3);
-    text-decoration: underline;
+    color: var(--color1);
+    text-decoration: none;
 }
 
 .nav-item {
     list-style-type: none;
-    margin: 5%;
-    padding: 5%;
+    margin: 1rem;
+    padding: 1rem;
 }
 
-.section {
-    grid-area: section;
-    padding: 3rem;
-}
-
-.aside {
-    grid-area: aside;
-    padding: 3rem;
-    position: relative;
-    top: 5rem;
+main {
+    grid-area: main;
 }
 
 .footer {
