@@ -1,0 +1,104 @@
+:root {
+    --color1: #F5F5F5;
+    --color2: #7962DF;
+    --color3: #F9D44E;
+    --color4: #F0BE0A;
+    --color5: #574200; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--color1);
+    color: var(--color5);
+}
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color3);
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "navbar section aside"
+    "footer footer footer";
+    /* Displays properly in Chrome without this. Works in Firefox with or without.
+    grid-template-rows: 20% 70% 10%;
+    */
+    grid-template-columns: 10% 50% 40%;
+    margin: 0;
+}
+
+header {
+    grid-area: header;
+    /* Added to be able to place flag in bottom left corner of banner image */
+    position: relative;
+}
+
+.bannerpic {
+    width: 100vw;
+    z-index: 1;
+}
+
+#logo {
+    position: absolute;
+    left: 0;
+    bottom: 0.25rem;
+    opacity: 0.8;
+    width: 20vw;
+    z-index: 0;
+}
+
+.header-text {
+    color: var(--color5);
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: var(--color4);
+    align-items: left;
+    min-width: fit-content;
+}
+
+.navbar a {
+    color: var(--color2);
+    text-decoration: none;
+    font-size: 14pt;
+}
+
+nav a:hover {
+    color: var(--color3);
+    text-decoration: underline;
+}
+
+.nav-item {
+    list-style-type: none;
+    margin: 5%;
+    padding: 5%;
+}
+
+.section {
+    grid-area: section;
+    padding: 3rem;
+}
+
+.aside {
+    grid-area: aside;
+    padding: 3rem;
+    position: relative;
+    top: 5rem;
+}
+
+.footer {
+    grid-area: footer;
+}
