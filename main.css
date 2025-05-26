@@ -167,3 +167,12 @@ main {
     grid-area: image;
     max-width: 50%;
 }
+
+/* FAQ page */
+#FAQ-header {
+    grid-area: header;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
