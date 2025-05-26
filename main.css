@@ -23,7 +23,7 @@ a:hover {
     color: var(--color1);
 }
 
-body {
+#index {
     display: grid;
     grid-template-areas:
     "header"
@@ -35,7 +35,7 @@ body {
     min-height: 100vh;
 }
 
-header {
+#index-header {
     grid-area: header;
     position: relative;
     display: flex;
@@ -109,4 +109,61 @@ main {
 
 .footer {
     grid-area: footer;
+    background-color: var(--color2);
+}
+
+/* Food page */
+#food-header {
+    grid-area: header;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#food_image1 {
+    grid-area: image;
+    max-width: 50%;
+}
+
+/* Lodging page */
+#lodging-header {
+    grid-area: header;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#lodging_image1 {
+    grid-area: image;
+    max-width: 50%;
+}
+
+/* Entertainment page */
+#entertainment-header {
+    grid-area: header;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#entertainment_image1 {
+    grid-area: image;
+    max-width: 50%;
+}
+
+/* Transportation page */
+#transportation-header {
+    grid-area: header;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#transportation_image1 {
+    grid-area: image;
+    max-width: 50%;
 }
